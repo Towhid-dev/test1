@@ -1,0 +1,29 @@
+# ng new TaqwaCoding --routing  // Creating Project
+# Writing Notes inside assets/AppNotes
+# Setting up Bootstrap4 , Jquery & popper.js with > 
+    1. npm install bootstrap jquery popper.js --save
+    2. Make Changes in Angular.json
+        "styles": [
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+        "scripts": [
+            "./node_modules/jquery/dist/jquery.min.js",
+            "./node_modules/popper.js/dist/umd/popper.min.js",
+            "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+        ]
+    3. Bootstrap Intellisense Activation.
+        * press > cnt + shift + p -on vs code
+        * type & enter > ext install HTML CSS Class Completion
+        * install > Intellisense for css class.
+# Creating Component:
+    1. ng g c Product/all-product
+    2. ng g c home
+    3. ng g c page-not-found
+
+# app-routing-module
+    * Import components
+    * Declare path into > const appRoutes: Routes = []
+
+# ng g d shared/ConfirmEqualValidator -m=app.module --spec=false
+    
