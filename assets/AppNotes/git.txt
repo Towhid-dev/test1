@@ -29,7 +29,7 @@ How to publish build project into github.io ? (https://dzone.com/articles/how-to
     # cut all build files into root dist folder from project name folder.
     
     # publish app with bellow command. it will remove all previous files into git repository and put new build files.
-        ngh -no-silent
+        ngh --no-silent
     
     # all done. now check url: "https://accname.github.io/repo1/" . your project will be live.
 

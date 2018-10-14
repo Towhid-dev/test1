@@ -1,3 +1,5 @@
+Two step parent level.
+    import { AuthenticationService } from '../../services/authentication.service';
 # ng new TaqwaCoding --routing  // Creating Project
 # Writing Notes inside assets/AppNotes
 # Setting up Bootstrap4 , Jquery & popper.js with > 
@@ -25,5 +27,63 @@
     * Import components
     * Declare path into > const appRoutes: Routes = []
 
-# ng g d shared/ConfirmEqualValidator -m=app.module --spec=false
+# ng g d shared/ConfirmEqualValidator -m=app.module --spec=false -d
+# ng g g auth/Auth -m=app.module --spec=false -d  // (module not adding. set manualy)
+# ng g service auth/Authentication -module=app.module --spec=false -d
+
+# import "HttpClientModule" in app.module and imports: [ ] array. to fix http error.
+
+# install ngx-toastr to show error message. (https://www.npmjs.com/package/ngx-toastr)
+
+    1. npm install ngx-toastr --save
+    2.npm install @angular/animations --save   (this is dependancy for toastr)
+    3.add into angular.json style array.
+            "styles": [
+                "styles.scss",
+                "node_modules/ngx-toastr/toastr.css" // try adding '../' if you're using angular cli before 6
+                ]
+    4. import into root module / usable module.
+            * add import statement
+                    import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+                    import { ToastrModule } from 'ngx-toastr';
+            *add into imports array
+                    imports: [
+                        BrowserAnimationsModule, // required animations module
+                        ToastrModule.forRoot() // ToastrModule added
+                    ],
+    5. Use in component:
+        * import statement:
+            import { ToastrService } from 'ngx-toastr';
+        * add constructor
+            constructor(
+                private toastr: ToastrService,
+                ) { }
+        * apply on event / method calling
+            this.toastr.error(err.error);
+
+# ng g c auth/forbidden -m=app.module  // to show pages for unauthorised roles users.
+
+# creating global variable.
+    make a  common / global service.
+        Note: observable is required to asyn data.
+            constructor is fast loding
+            ngoninit is right place o call service but lazy. after constructor its call.
+    # For Boolean type variable:
+        * At service.ts:
+            private drawerstatus = new BehaviorSubject<boolean>(false);
+            getDrawerStatus$ = this.drawerstatus.asObservable();
+            setDrawerStatus() {
+                // error for !this.leftdrawer -set value of this.
+                this.drawerstatus.next(!this.drawerstatus.value);
+            }
+        * at component.ts that need this value as observabe.(asyn / auto update.)
+            1. constructor(private _router: Router, private _commservice: CommonService ) {}
+            2. leftdrawerstatus : boolean
+            3. ngOnInit() { 
+                this._commservice.getDrawerStatus$.subscribe(val => this.leftdrawerstatus = val)
+               }
+# Login & Logout icon in navbar.
+    1. Set login status in common service.
+    2. Call it from Login() & SignOut()
+    3. also call from constructor so it checked logged-in status if user has token from previous session. 
     
