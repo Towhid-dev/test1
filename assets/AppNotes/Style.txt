@@ -52,7 +52,7 @@ position: absolute; ???
     row no-gutters"      //remove all padding and margin from row.
     col-md-10 col-sm-12     // this column 10/12 for >=medium & 12 unit for <=small screen. BS4 grid system.
     col-md-8 offset-md-2    //BS4 change offset class. 2/12-unit for left + right margin will add for medium device.
-    material-icons      // angular material icon. class manually defined at style.css
+    material-icons      // angular material icon. class manually defined at style.css -- https://material.io/tools/icons/?style=baseline
     scrollbar       //class defined for scrollbar. Manual class
     .clickButton{} .clickButton:focused{color:rgb(175, 13, 13);}.clickButton:active {color:rgb(53, 245, 14);}
 

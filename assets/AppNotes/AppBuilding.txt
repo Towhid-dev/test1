@@ -87,3 +87,5 @@ Two step parent level.
     2. Call it from Login() & SignOut()
     3. also call from constructor so it checked logged-in status if user has token from previous session. 
     
+# npm install --save font-awesome angular-font-awesome
+    Next add into style array in anguar.json: "./node_modules/font-awesome/css/font-awesome.css"
