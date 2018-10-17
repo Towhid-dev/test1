@@ -1,5 +1,11 @@
 ## In angular.json style array order will be affecter. styles will not fire if invoked first. place style.css in the last position.
 
+# Image / Photo customization // https://www.w3schools.com/css/css3_images.asp
+        (Rounded Images, Thumbnail Images, Responsive Images, Center an Image, Polaroid Images / Cards
+         , Transparent Image, Image Text, Image Filters(add visual effects), Image Hover Overlay (on Hover some effect),
+         Flip an Image, Responsive Image Gallery,Image Modal (Advanced),  )
+# Images / object fit property - important441 // https://www.w3schools.com/css/css3_object-fit.asp
+        ( )
 # HTML Tags:
     &nbsp;      //used to make a space between two element.
     
@@ -31,6 +37,7 @@ position: absolute; ???
     border-radius : 20px;   //border will be rounded.
     border: 1px solid;      // set border / stock
     filter: brightness(80%);  // set brightness of a photo with this.
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  // make shadow
     * position: absolute; top:50%; left:50%;transform: translate(-50%, -50%)
             // above styles: placed previous photo declared and position middle. 
     

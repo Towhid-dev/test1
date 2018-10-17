@@ -1,5 +1,10 @@
-Two step parent level.
+# Application Limitations:
+    1. Browser resize problem.
+        * If left drawer is open & > browser resized to small > and change drawer backdrop = true > if closed drawer with baackdrop > !error occured in view- if the browser resiged to bigger screen.
+            (this can be solved if we always use backdrop = false. or if we always use toogle button to open & close the drawer. )
+# Two step back to go parent level folder location.
     import { AuthenticationService } from '../../services/authentication.service';
+
 # ng new TaqwaCoding --routing  // Creating Project
 # Writing Notes inside assets/AppNotes
 # Setting up Bootstrap4 , Jquery & popper.js with > 
