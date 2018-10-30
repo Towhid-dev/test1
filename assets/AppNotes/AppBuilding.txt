@@ -34,7 +34,7 @@
 
 # ng g d shared/ConfirmEqualValidator -m=app.module --spec=false -d
 # ng g g auth/Auth -m=app.module --spec=false -d  // (module not adding. set manualy)
-# ng g service auth/Authentication -module=app.module --spec=false -d
+# ng g service auth/Authentication -m=app.module --spec=false -d
 
 # import "HttpClientModule" in app.module and imports: [ ] array. to fix http error.
 
@@ -94,3 +94,9 @@
     
 # npm install --save font-awesome angular-font-awesome
     Next add into style array in anguar.json: "./node_modules/font-awesome/css/font-awesome.css"
+
+# Implementing interceptor for http call. (to add bearer token & Handle all error.)
+    * this add token before any http request and handle http error globaly.
+        https://medium.com/@er.surajnegi/what-are-angular-http-interceptors-and-how-to-create-them-82d1d6159c4e
+        https://medium.com/@aleixsuau/error-handling-angular-859d529fa53a
+        http://www.advancesharp.com/blog/1234/global-error-handling-in-angular-6-with-httpclient-interceptor
