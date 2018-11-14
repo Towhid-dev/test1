@@ -100,3 +100,10 @@
         https://medium.com/@er.surajnegi/what-are-angular-http-interceptors-and-how-to-create-them-82d1d6159c4e
         https://medium.com/@aleixsuau/error-handling-angular-859d529fa53a
         http://www.advancesharp.com/blog/1234/global-error-handling-in-angular-6-with-httpclient-interceptor
+# Implement a global Http spinner.
+    * Interceptor will detect when to show loading indicator. set data into common service.
+    *Pick common service into nav component.
+        private _commonService : CommonService,
+    * Bind directly into nav component html page to show all routing pages.
+        <div *ngIf="_commonService.httpLoadingIndicator" class="spinner"></div>
+    * Bind into modal component html page separatetly bcz its popup.
